@@ -20,6 +20,11 @@
     "semantic-release",
     "version"
   ],
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+    "lint": "npx prettier --check \"./**/*.{js,md}\"",
+    "format": "npx prettier --write \"./**/*.{js,md}\""
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^20.0.0",
     "commitlint": "^20.0.0",
@@ -34,8 +39,5 @@
   },
   "peerDependencies": {
     "semantic-release": ">=21.0.0"
-  },
-  "scripts": {
-    "prepare": "husky"
   }
 }
